@@ -103,7 +103,7 @@ struct ContentView: View {
             request.allHTTPHeaderFields = headers
             request.httpBody = parameters.data(using: .utf8)
             
-//             Codable 사용 (objectMapper,)
+//          Codable 사용
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 if let error = error {
                     completionHandler(nil, error)
