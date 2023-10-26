@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F2B1729185F861F23C62D71 /* Pods_PapagoTranslationAPI_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA4B3E74B7D2E3E663881A3 /* Pods_PapagoTranslationAPI_SwiftUI.framework */; };
 		71B65C5D2ADFA2DA005DBA92 /* PapagoTranslationAPI_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B65C5C2ADFA2DA005DBA92 /* PapagoTranslationAPI_SwiftUIApp.swift */; };
 		71B65C5F2ADFA2DA005DBA92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B65C5E2ADFA2DA005DBA92 /* ContentView.swift */; };
 		71B65C612ADFA2DB005DBA92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71B65C602ADFA2DB005DBA92 /* Assets.xcassets */; };
@@ -15,12 +16,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4CA4B3E74B7D2E3E663881A3 /* Pods_PapagoTranslationAPI_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PapagoTranslationAPI_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71B65C592ADFA2DA005DBA92 /* PapagoTranslationAPI_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PapagoTranslationAPI_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71B65C5C2ADFA2DA005DBA92 /* PapagoTranslationAPI_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PapagoTranslationAPI_SwiftUIApp.swift; sourceTree = "<group>"; };
 		71B65C5E2ADFA2DA005DBA92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		71B65C602ADFA2DB005DBA92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71B65C632ADFA2DB005DBA92 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		71F4CCC62AE13E8C00E0C8A1 /* TranslateInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TranslateInfo.plist; sourceTree = "<group>"; };
+		E04424791FC94846789808A4 /* Pods-PapagoTranslationAPI_SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PapagoTranslationAPI_SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-PapagoTranslationAPI_SwiftUI/Pods-PapagoTranslationAPI_SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
+		EB40C4235D9F02E23AB9B9FF /* Pods-PapagoTranslationAPI_SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PapagoTranslationAPI_SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-PapagoTranslationAPI_SwiftUI/Pods-PapagoTranslationAPI_SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F2B1729185F861F23C62D71 /* Pods_PapagoTranslationAPI_SwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 				71F4CCC62AE13E8C00E0C8A1 /* TranslateInfo.plist */,
 				71B65C5B2ADFA2DA005DBA92 /* PapagoTranslationAPI_SwiftUI */,
 				71B65C5A2ADFA2DA005DBA92 /* Products */,
+				803C3AB7E4536D6F32E43B39 /* Pods */,
+				D6642588AD0D20BE74A98F9C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +77,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		803C3AB7E4536D6F32E43B39 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB40C4235D9F02E23AB9B9FF /* Pods-PapagoTranslationAPI_SwiftUI.debug.xcconfig */,
+				E04424791FC94846789808A4 /* Pods-PapagoTranslationAPI_SwiftUI.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D6642588AD0D20BE74A98F9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CA4B3E74B7D2E3E663881A3 /* Pods_PapagoTranslationAPI_SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71B65C672ADFA2DB005DBA92 /* Build configuration list for PBXNativeTarget "PapagoTranslationAPI_SwiftUI" */;
 			buildPhases = (
+				033B23AFD5DDE8875B6DEC9A /* [CP] Check Pods Manifest.lock */,
 				71B65C552ADFA2DA005DBA92 /* Sources */,
 				71B65C562ADFA2DA005DBA92 /* Frameworks */,
 				71B65C572ADFA2DA005DBA92 /* Resources */,
+				239759A6CEEBAF77EDAD07F9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +161,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		033B23AFD5DDE8875B6DEC9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PapagoTranslationAPI_SwiftUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		239759A6CEEBAF77EDAD07F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PapagoTranslationAPI_SwiftUI/Pods-PapagoTranslationAPI_SwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PapagoTranslationAPI_SwiftUI/Pods-PapagoTranslationAPI_SwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PapagoTranslationAPI_SwiftUI/Pods-PapagoTranslationAPI_SwiftUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		71B65C552ADFA2DA005DBA92 /* Sources */ = {
@@ -270,6 +338,7 @@
 		};
 		71B65C682ADFA2DB005DBA92 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB40C4235D9F02E23AB9B9FF /* Pods-PapagoTranslationAPI_SwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -278,6 +347,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PapagoTranslationAPI_SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = J3XZ67KDFK;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -299,6 +369,7 @@
 		};
 		71B65C692ADFA2DB005DBA92 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E04424791FC94846789808A4 /* Pods-PapagoTranslationAPI_SwiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -307,6 +378,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PapagoTranslationAPI_SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = J3XZ67KDFK;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

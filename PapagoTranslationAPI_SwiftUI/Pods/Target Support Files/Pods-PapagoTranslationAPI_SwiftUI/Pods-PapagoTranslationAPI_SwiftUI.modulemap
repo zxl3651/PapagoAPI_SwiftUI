@@ -1,0 +1,6 @@
+framework module Pods_PapagoTranslationAPI_SwiftUI {
+  umbrella header "Pods-PapagoTranslationAPI_SwiftUI-umbrella.h"
+
+  export *
+  module * { export * }
+}

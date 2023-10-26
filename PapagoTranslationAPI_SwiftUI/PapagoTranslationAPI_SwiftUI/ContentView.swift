@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import Alamofire
 
 extension Bundle {
     var Client_ID : String? {
@@ -96,6 +96,7 @@ struct ContentView: View {
         ]
         
         let parameters = "source=ko&target=\(targetLanguage)&text=\(text)"
+       
         
         if let url = URL(string: apiURL) {
             var request = URLRequest(url: url)
@@ -103,16 +104,38 @@ struct ContentView: View {
             request.allHTTPHeaderFields = headers
             request.httpBody = parameters.data(using: .utf8)
             
-//          Codable 사용
-            let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                if let error = error {
-                    completionHandler(nil, error)
-                } else if let data = data {
-                    if let json = try? JSONDecoder().decode(PapagoResModel.self, from: data){
-                        print(json)
+            AF.request(request).responseJSON { response in
+                switch response.result{
+                case .success(let value):
+                    print("성공")
+                    do {
+                        // value 는 Any 타입이기 때문에 Data 타입으로 바로 변환이 되지 않는다!
+                        // 따라서 value(Any)를 JSON으로 변경을 먼저 해주고,
+                        let dataJSON = try JSONSerialization.data(withJSONObject: value)
+                        
+                        // JSON Decoder를 사용한다. (Codable)
+                        let json = try JSONDecoder().decode(PapagoResModel.self, from: dataJSON)
+                        
+                        completionHandler(json.message.result.translatedText, nil)
+                    } catch {
+                        print(error)
                     }
+                case .failure(let error):
+                    print("실패 : \(error)")
                 }
             }
+            
+            
+//          Codable 사용
+//            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+//                if let error = error {
+//                    completionHandler(nil, error)
+//                } else if let data = data {
+//                    if let json = try? JSONDecoder().decode(PapagoResModel.self, from: data){
+//                        completionHandler(json.message.result.translatedText, nil)
+//                    }
+//                }
+//            }
             
             // 기존 방법
 //            let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -132,7 +155,6 @@ struct ContentView: View {
 //                }
 //            }
             
-            task.resume()
         }
     }
     
